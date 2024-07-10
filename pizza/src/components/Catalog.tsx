@@ -1,73 +1,56 @@
 import React from "react";
-import axios from "axios";
-import { useQuery } from "react-query";
 import CardPizza from "./CardPizza";
+import {PizzaData} from "../pages/CatalogPage"
 
 
 const imgUrlStart = "https://shift-backend.onrender.com";
 
-interface PizzaData {
-  allergens: Array<string>,
-  calories: 320,
-  carbohydrates: string,
-  description: string,
-  doughs: Array<{name: string, price: number}>,
-  id: string,
-  img: string,
-  ingredients: Array<{name: string, cost: number, img: string}>,
-  isGlutenFree: boolean,
-  isHit: boolean,
-  isNew: boolean,
-  isVegetarian: boolean,
-  name: string,
-  protein: string,
-  sizes: Array<{name: string, price: number}>,
-  soium: string,
-  toppings: Array<{name: string, cost: number, img: string}>,
-  totalFat: string
+interface CatalogProps {
+    catalog: PizzaData[],
+    setChoosenPizza: React.Dispatch<React.SetStateAction<PizzaData | undefined>>
+    setIsPopUpOpen: React.Dispatch<React.SetStateAction<boolean>>
 }
 
+const Catalog: React.FC<CatalogProps> = ({ catalog, setChoosenPizza, setIsPopUpOpen }) => {
+    const getPizzaCard = (item: PizzaData, onAddToCart: ()=>void): JSX.Element => {
+        const url = imgUrlStart + item.img;
+        const prices = item.sizes.map((element) => element.price);
+        const minPrice = Math.min(...prices);
+        return (
+            <CardPizza 
+                imgUrl={url} 
+                name={item.name} 
+                description={item.description} 
+                price={minPrice} 
+                onAddToCart={onAddToCart}
+            ></CardPizza>
+        );
+    }
 
-const fetchData = async () => {
-  const { data } = await axios.get('https://shift-backend.onrender.com/pizza/catalog');
-  return data;
-};
+    const toPizzaCard = (item: PizzaData): JSX.Element => {
+        return getPizzaCard(item, () => { setChoosenPizza(item); setIsPopUpOpen(true) } );
+    }
 
+    let cards = catalog.map(toPizzaCard);
+    const frameSize = 3;
+    const pizzaFrames = [];
+    for (let i = 0; i < cards.length; i += frameSize) {
+        const frame = cards.slice(i, i + frameSize);
+        pizzaFrames.push(frame);
+    }
 
-function getPizzaCard(item: PizzaData): JSX.Element{
-  const url = imgUrlStart + item.img;
-  const prices = item.sizes.map((element) => element.price);
-  const minPrice = Math.min(...prices);
-  return <CardPizza imgUrl={url} name={item.name} description={item.description} price={minPrice}></CardPizza>;
-}
-
-
-const PizzaCards: React.FC = () => {
-  const { isLoading, isError, data } = useQuery<{success: boolean, catalog: Array<PizzaData>}>("catalogData", fetchData);
-
-  if (isLoading) return <div>Loading...</div>;
-  if (isError) return <div>Error fetching data</div>;
-  
-  let cards = data!.catalog.flatMap(getPizzaCard);
-
-  const frameSize = 3;
-  const pizzaFrames = [];
-  for (let i = 0; i < cards.length; i += frameSize) {
-    const frame = cards.slice(i, i + frameSize);
-    pizzaFrames.push(frame);
-  }
-
-  return (
-    <div className="content">
-      {pizzaFrames.map((frame, index) => (
-        <div key={index} className="frame">
-          {frame.map((card, subIndex) => (
-            <div key={subIndex}>{card}</div>
-          ))}
+    return (
+        <div className="catalog-content">
+            {pizzaFrames.map((frame, index) => (
+                <div key={index} className="catalog-frame">
+                {frame.map((card, subIndex) => (
+                    <React.Fragment key={subIndex}>{card}</React.Fragment>
+                ))}
+                </div>
+            ))}
+            <div className="catalog-space"></div>    
         </div>
-      ))}
-    </div>
-  );
+    );
 };
 
-export default PizzaCards;
+export default Catalog;

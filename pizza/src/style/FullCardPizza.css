@@ -1,0 +1,377 @@
+.left-tab {
+    /* Label */
+    /* left tab */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 16px;
+    gap: 24px;
+
+    width: 130px;
+    height: 40px;
+
+    background: #FFFFFF;
+    border-radius: 14px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+.left-tab-lable {
+    width: 98px;
+    height: 20px;
+
+    /* Paragraph 14/Regular */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+    text-align: center;
+
+    color: #141C24;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+
+.mid-tab {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 16px;
+    gap: 24px;
+
+    width: 130px;
+    height: 40px;
+
+    border-radius: 14px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 1;
+
+}
+
+.mid-tab-lable {
+    /* Label */
+
+    width: 98px;
+    height: 20px;
+
+    /* Paragraph 14/Regular */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+    text-align: center;
+
+    color: #637083;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+.right-tab {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 16px;
+    gap: 24px;
+
+    width: 130px;
+    height: 40px;
+
+    border-radius: 14px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    flex-grow: 1;
+}
+
+
+.right-tab-lable {
+    width: 98px;
+    height: 20px;
+
+    /* Paragraph 14/Regular */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+    text-align: center;
+
+    color: #637083;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+.common-space {
+    /* common space */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 2px;
+
+    width: 394px;
+    height: 44px;
+
+    background: #F3F4F7;
+    border-radius: 16px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+
+}
+
+.tabs {
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 10px;
+
+    width: 394px;
+    height: 44px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+
+}
+
+
+.text {
+    /* Text */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+
+    width: 394px;
+    height: 116px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+
+}
+
+
+.text1 {
+    width: 394px;
+    height: 32px;
+
+    /* Title/H2 */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    /* identical to box height, or 133% */
+
+    /* Text/Title */
+    color: #292929;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.text2 {
+    width: 394px;
+    height: 20px;
+
+    /* Paragraph 14/Regular */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+    /* Text/Body Primary */
+    color: #535353;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+
+.text3 {
+    width: 394px;
+    height: 48px;
+
+    /* Paragraph 16/Regular */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* or 150% */
+
+    /* Text/Body Primary */
+    color: #535353;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+
+.full-card-frame1 {
+    /* Frame */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 16px;
+    gap: 24px;
+
+    width: 426px;
+    height: 184px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+
+.full-card-frame2 {
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+
+    width: 426px;
+    height: 268px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+}
+
+
+.frame21 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px 0px 0px 16px;
+    gap: 10px;
+
+    width: 426px;
+    height: 24px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.frame22 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: center;
+    padding: 8px 0px 0px;
+    gap: 11px;
+
+    width: 426px;
+    height: 236px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+
+}
+
+
+.text4 {
+    width: 410px;
+    height: 24px;
+
+    /* Paragraph 16/Medium */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+    /* Text/Title */
+    color: #292929;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+
+}
