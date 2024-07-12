@@ -1,0 +1,267 @@
+.pop-up {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 16px 24px 0px;
+    gap: 10px;
+    width: 100%;
+    height: 5%;
+    background: #FFFFFF;
+    border-radius: 16px 16px 0px 0px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.line {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+    width: 3%;
+    aspect-ratio: 1 / 1;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.cross {
+    width: 100%;
+    height: 100%;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.img-cross {
+    width: 100%;
+    height: 100%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    position: absolute;
+    width: 64%;
+    height: 90%;
+    left: 18%;
+    top: 5%;
+    flex: none;
+    order: 3;
+    flex-grow: 0;
+    z-index: 3;
+}
+
+.login {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 24px;
+    isolation: isolate;
+    width: 100%;
+    height: 95%;
+    background: #FFFFFF;
+    border-radius: 0px 0px 16px 16px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.login-frame {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+    width: 90%;
+    height: 90%;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    z-index: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pizza {
+    margin: 0 auto;
+    width: 30%;
+    aspect-ratio: 1 / 1;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.child-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+    margin: 0 auto;
+    width: 50%;
+    height: 100%;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.child-frame1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 16px;
+    gap: 24px;
+    width: 100%;
+    height: 50%;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.child-frame1-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+    width: 100%;
+    height: 60%;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.child-frame1-text1 {
+    width: 100%;
+    height: 40px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+    color: #292929;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.child-frame1-text2 {
+    width: 100%;
+    height: 30px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: #535353;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.child-frame1-text3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 90%;
+    height: 48px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #535353;
+    flex: none;
+    order: 2;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.child-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    gap: 8px;
+    width: 100%;
+    font-size: 20px;
+    height: 10%;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    transform: translateY(10px);
+}
+
+.chosen-tab {
+    background: #FFFFFF;
+}
+
+.tabs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    gap: 10px;
+    width: 90%;
+    height: 50px;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.common-space {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 2px;
+    width: 100%;
+    height: 50px;
+    background: #F3F4F7;
+    border-radius: 16px;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.tab {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    width: 130px;
+    height: 50px;
+    border-radius: 14px;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+
+}
